@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="../bower_components/angular/angular.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../bower_components/angular-resource/angular-resource.js" type="text/javascript" charset="utf-8"></script>
+        <script src="app.js" type="text/javascript" charset="utf-8"></script>
+        <script src="post.controller.js" type="text/javascript" charset="utf-8"></script>
+    </head>
+    <body ng-app="ng-res-test">
+        <div id="" ng-controller="postController">
+            <h1>{{message}}</h1>
+            <ul>
+                <li ng-repeat="post in posts" ng-click="select(post)">
+                    id: {{post.id}}    title: {{post.title}}
+                </li>
+                
+            </ul>
+            <div id="">
+                ID: <input type="text" ng-model="id" name="txtID" id="txtID" value=""/>
+                Title: <input type="text" ng-model="title" name="txtTitle" id="txtID" value="" />
+                <hr>
+                <span>
+                <input type="button" name="btnCreate" id="btnCreate" value="Query" ng-click="query()">
+                <input type="button" name="btnSave" id="btnSave" value="Save" ng-click="save()">
+                <input type="button" name="btnUpdate" id="bttUpdate" value="Update" ng-click="update()">
+                <input type="button" name="btnDelete" id="btnDelete" value="Delete" ng-click="delete()">
+                </span>
+            </div>
+        </div>
+    </body>
+</html>
